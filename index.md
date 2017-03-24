@@ -13,7 +13,7 @@ always learning new languages and technologies to try and broaden my skill set.
 
 I love startups and all thing tech, as I've been involved with making my own
 websites since I was 13. I've built several companies in that time and am now
-currently a Co-Founder of [Algo](http://algo.com). We are doing some awesome
+currently a **Co-Founder of [Algo](http://algo.com)**. We are doing some awesome
 stuff in the news and data spaces.
 
 The languages I work with are:
