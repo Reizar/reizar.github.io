@@ -13,15 +13,7 @@
     
     
     <url>
-        <loc>http://localhost:4000/blog/2014/jekyll-prose-io</loc>
-    </url>
-    
-    <url>
-        <loc>http://localhost:4000/blog/2014/how-many-things-are-there</loc>
-    </url>
-    
-    <url>
-        <loc>http://localhost:4000/blog/2014/first-commit</loc>
+        <loc>http://localhost:4000/blog/2017/initial-commit</loc>
     </url>
     
 </urlset>

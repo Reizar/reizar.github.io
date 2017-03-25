@@ -1,18 +1,8 @@
 callback([
 
   {
-    "text": "First Commit",
-    "href": "http://localhost:4000/blog/2014/first-commit"
-  } ,
-
-  {
-    "text": "How many things are there?",
-    "href": "http://localhost:4000/blog/2014/how-many-things-are-there"
-  } ,
-
-  {
-    "text": "Jekyll + Prose.io",
-    "href": "http://localhost:4000/blog/2014/jekyll-prose-io"
+    "text": "Initial Commit",
+    "href": "http://localhost:4000/blog/2017/initial-commit"
   } 
 
 ])
