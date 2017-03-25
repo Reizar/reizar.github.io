@@ -1,19 +1,37 @@
+<<<<<<< HEAD
+---
+layout: none
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    {% for link in site.links %}{% if link.external %}{% else %} 
+    <url>
+        <loc>{{ site.url }}{{ link.url }}</loc>
+    </url>{% endif %}{% endfor %}
+    
+    {% for post in site.posts %}
+    <url>
+        <loc>{{ site.url }}{{ post.url }}</loc>
+    </url>
+    {% endfor %}
+=======
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
      
     <url>
-        <loc>/</loc>
+        <loc>http://localhost:4000/</loc>
     </url> 
     <url>
-        <loc>/blog</loc>
+        <loc>http://localhost:4000/blog</loc>
     </url> 
     <url>
-        <loc>/categories</loc>
+        <loc>http://localhost:4000/categories</loc>
     </url>
     
     
     <url>
-        <loc>/blog/2017/initial-commit</loc>
+        <loc>http://localhost:4000/blog/2017/initial-commit</loc>
     </url>
     
+>>>>>>> a4c02971a8c7b0ae5e019ec0ac5151a51394b090
 </urlset>
