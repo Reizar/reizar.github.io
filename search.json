@@ -1,27 +1,11 @@
 [
 	
 		{
-		  "title"      : "Jekyll + Prose.io",
+		  "title"      : "Initial Commit",
 		  "category"   : "",
-		  "url"        : "http://localhost:4000/blog/2014/jekyll-prose-io",
-		  "date"       : "2014-05-15 00:00:00 +1200",
-		  "shortdate"  : "May 15, 2014"
-		} ,
-	
-		{
-		  "title"      : "How many things are there?",
-		  "category"   : "",
-		  "url"        : "http://localhost:4000/blog/2014/how-many-things-are-there",
-		  "date"       : "2014-05-15 00:00:00 +1200",
-		  "shortdate"  : "May 15, 2014"
-		} ,
-	
-		{
-		  "title"      : "First Commit",
-		  "category"   : "",
-		  "url"        : "http://localhost:4000/blog/2014/first-commit",
-		  "date"       : "2014-05-15 00:00:00 +1200",
-		  "shortdate"  : "May 15, 2014"
+		  "url"        : "http://localhost:4000/blog/2017/initial-commit",
+		  "date"       : "2017-03-25 00:00:00 +1300",
+		  "shortdate"  : "March 25, 2017"
 		} 
 	
 ]
