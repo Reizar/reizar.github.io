@@ -13,6 +13,10 @@ task :prod_build do
   Rake::Task['purify_css'].invoke
 end
 
+task :prod_push do
+ `git subtree push --prefix _site origin master`
+end
+
 desc "Start a new post"
 task :new, :title do |t, args|
  args.with_defaults(:title => 'My New Post')

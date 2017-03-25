@@ -35,4 +35,4 @@ I also use these libraries / software reguarly:
 - Elasticsearch
 
 Thanks for taking the time to check out my site, please do have a read of my blog
-and feel free to comment or get in contact with me.
+and feel free to comment or get in contact with me. 
