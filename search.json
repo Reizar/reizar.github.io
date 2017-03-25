@@ -3,7 +3,7 @@
 		{
 		  "title"      : "Initial Commit",
 		  "category"   : "",
-		  "url"        : "http://localhost:4000/blog/2017/initial-commit",
+		  "url"        : "/blog/2017/initial-commit",
 		  "date"       : "2017-03-25 00:00:00 +1300",
 		  "shortdate"  : "March 25, 2017"
 		} 
