@@ -8,6 +8,24 @@ task :purify_css do
   end
 end
 
+task :prod_build do
+  exec("JEKYLL_ENV=production jekyll build")
+  Rake::Task['purify_css'].invoke
+end
+
+desc 'Compile the site and deploy it to production'
+task :deploy do
+  sh %{git checkout master}
+  sh %{git checkout -B tmp-gh-pages}
+  Rake::Task['prod_build'].invoke
+  sh %{git add -f _site}
+  sh %{git commit -m 'Generated site'}
+  sh %{git subtree split --prefix _site -b gh-pages}
+  sh %{git push -f origin gh-pages}
+  sh %{git branch -D gh-pages}
+  sh %{git checkout master}
+end
+
 
   desc "Start a new post"
   task :new, :title do |t, args|
