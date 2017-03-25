@@ -11,10 +11,14 @@ end
 task :prod_build do
   `JEKYLL_ENV=production jekyll build`
   Rake::Task['purify_css'].invoke
+  `touch _site/.nojekyll`
 end
 
 task :prod_push do
- `git subtree push --prefix _site origin master`
+  `git add -f _site/`
+  `git commit -m 'Updated Site'` 
+  `git subtree push -f --prefix _site origin master`
+  `git rm -rf _site/`
 end
 
 desc "Start a new post"
