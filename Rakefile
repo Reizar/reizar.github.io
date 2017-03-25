@@ -15,10 +15,7 @@ task :prod_build do
 end
 
 task :prod_push do
-  `git add -f _site/`
-  `git commit -m 'Updated Site'` 
   `git subtree push --prefix _site origin master`
-  `git rm -rf _site/`
 end
 
 desc "Start a new post"
