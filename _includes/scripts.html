@@ -1,5 +1,11 @@
-<script src="{{ site.url }}/assets/js/vendor/fastclickb146.js?v=77a7756db2"></script>
-<script src="{{ site.url }}/assets/js/summerb146.js?v=77a7756db2"></script>
+{% minibundle js %}
+source_dir: assets/js
+destination_path: assets/site
+baseurl: '{{ site.baseurl }}/'
+assets:
+  - /vendor/fastclick
+  - main
+{% endminibundle %}
 
 {% if site.google_analytics %}
 <!-- Asynchronous Google Analytics snippet -->

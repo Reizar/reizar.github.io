@@ -1,5 +1,14 @@
   # adapted from https://github.com/imathis/octopress/blob/master/Rakefile   
   # usage rake new_post['My New Post'] or rake new_post (defaults to "My New Post")
+desc "Purify CSS of unused styles"
+task :purify_css do 
+  if file_name = Dir.glob("_site/assets/*.css").first 
+    htmls = Dir.glob("_site/**/*.html").join(" ")
+    exec("purifycss #{file_name} #{htmls} --info --out #{file_name}")
+  end
+end
+
+
   desc "Start a new post"
   task :new, :title do |t, args|
    args.with_defaults(:title => 'My New Post')

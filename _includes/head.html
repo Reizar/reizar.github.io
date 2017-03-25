@@ -36,14 +36,20 @@
 
 <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700&amp;subset=latin,latin-ext' rel='stylesheet'>
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800,600&amp;subset=latin,latin-ext' rel='stylesheet'>
-<link rel="stylesheet" href="{{ site.url }}/assets/css/font-awesome.min.css">
-<link rel="stylesheet" href="{{ site.url }}/assets/css/vendor/normalizeb146.css?v=77a7756db2">
-<link rel="stylesheet" href="{{ site.url }}/assets/css/vendor/foundation.minb146.css?v=77a7756db2">
-<link rel="stylesheet" href="{{ site.url }}/assets/css/styleb146.css?v=77a7756db2">
-<link rel="stylesheet" href="{{ site.url }}/assets/css/postb146.css?v=77a7756db2">
-<link rel="stylesheet" href="{{ site.url }}/assets/css/vendor/code.css?v=77a7756db2">
-<link rel="stylesheet" href="{{ site.url }}/assets/css/custom.css?v=77a7756db2">
-<script src="{{ site.url }}/assets/js/vendor/modernizrb146.js?v=77a7756db2"></script>
+{% minibundle css %}
+source_dir: assets/css
+destination_path: assets/site
+baseurl: '{{ site.baseurl }}/'
+assets:
+  - font-awesome.min
+  - /vendor/normalize
+  - /vendor/foundation
+  - style
+  - post
+  - /vendor/code
+  - custom
+{% endminibundle %}
+
 
 <!-- Icons -->
 <!-- 16x16 -->
