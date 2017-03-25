@@ -1,8 +1,0 @@
-callback([
-
-  {
-    "text": "Initial Commit",
-    "href": "/blog/2017/initial-commit"
-  } 
-
-])
