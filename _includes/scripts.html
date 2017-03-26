@@ -1,14 +1,6 @@
-{% minibundle js %}
-source_dir: assets/js
-destination_path: assets/site
-baseurl: '{{ site.baseurl }}/'
-assets:
-  - /vendor/fastclick
-  - main
-{% endminibundle %}
-
+<script src="/assets/js/vendor/fastclick.js"></script>
+<script src="/assets/js/main.js"></script>
 {% if site.google_analytics %}
-<!-- Asynchronous Google Analytics snippet -->
 <script>
   var _gaq = _gaq || [];
   var pluginUrl = 

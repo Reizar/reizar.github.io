@@ -19,7 +19,6 @@ GEM
       safe_yaml (~> 1.0)
     jekyll-compose (0.5.0)
       jekyll (>= 3.0.0)
-    jekyll-minibundle (2.2.0)
     jekyll-paginate (1.1.0)
     jekyll-sass-converter (1.5.0)
       sass (~> 3.4)
@@ -49,7 +48,6 @@ PLATFORMS
 DEPENDENCIES
   jekyll (~> 3)
   jekyll-compose
-  jekyll-minibundle
   jekyll-paginate
   json (~> 2)
   kramdown
