@@ -7,9 +7,6 @@
 .cf:after {
   clear: both; }
 
-html, body, .summer-post-container, .summer-post-header {
-  height: 100%; }
-
 .summer-post-header-title {
   display: inline-block;
   padding: 0;
@@ -28,16 +25,7 @@ html, body, .summer-post-container, .summer-post-header {
     .summer-post-header-title a:hover {
       color: white; }
 
-.post-template {
-  /* Header */
-  /* based on http://tympanus.net/Development/ArticleIntroEffects/index3.html */
-  /* Trigger Button */
-  /* Conent */
-  /* -------------------------- */
-  /* Sliced */
-  /* based on http://tympanus.net/Development/ArticleIntroEffects/index3.html
-  /* -------------------------- */
-  /* Delays */ }
+.post-template {}
   .post-template .summer-blog-menu .summer-mobile-menu a {
     color: white; }
     .post-template .summer-blog-menu .summer-mobile-menu a:hover {
@@ -50,7 +38,7 @@ html, body, .summer-post-container, .summer-post-header {
   .post-template .summer-post-header {
     position: relative;
     margin: 0 auto;
-    min-height: 35rem;
+    height: 5rem;
     width: 100%; }
     .post-template .summer-post-header .summer-post-menu-header {
       width: 100%;
@@ -66,33 +54,15 @@ html, body, .summer-post-container, .summer-post-header {
         max-height: 5rem; }
         .post-template .summer-post-header .summer-post-menu-header .summer-blog-logo img {
           max-height: 5rem; }
-  .post-template .bg-img {
-    position: absolute;
-    overflow: hidden;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    -webkit-backface-visibility: hidden; }
-    .post-template .bg-img img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      display: block;
-      min-width: 100%;
-      min-height: 100%;
-      max-width: none; }
   .post-template .summer-post-title {
+    width: 100%;
     z-index: 1000;
     margin: 0 auto;
     padding: 0 1.25em;
     text-align: center;
-    position: absolute;
-    width: 100%;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%); }
+    display: block;
+    margin-left: 50%;
+    padding-top: 220px;}
     .post-template .summer-post-title a {
       color: black; }
       .post-template .summer-post-title a:hover {
@@ -227,73 +197,9 @@ html, body, .summer-post-container, .summer-post-header {
       font-size: 50%; }
     .post-template button.trigger::before {
       display: none; } }
-  .post-template .intro-effect-sliced:not(.notrans) .bg-img,
-  .post-template .intro-effect-sliced:not(.notrans) .summer-post-title {
-    -webkit-transition-property: -webkit-transform;
-    transition-property: transform; }
-  .post-template .intro-effect-sliced:not(.notrans) .summer-post-header h1 {
-    -webkit-transition-property: color;
-    transition-property: color; }
-  .post-template .intro-effect-sliced:not(.notrans) .summer-post-header p {
-    -webkit-transition-property: opacity;
-    transition-property: opacity; }
-  .post-template .intro-effect-sliced:not(.notrans) .summer-post-content > div {
-    -webkit-transition-property: -webkit-transform, opacity;
-    transition-property: transform, opacity; }
-  .post-template .intro-effect-sliced:not(.notrans) .bg-img,
-  .post-template .intro-effect-sliced:not(.notrans) .summer-post-header h1,
-  .post-template .intro-effect-sliced:not(.notrans) .summer-post-title,
-  .post-template .intro-effect-sliced:not(.notrans) .summer-post-header p,
-  .post-template .intro-effect-sliced:not(.notrans) .summer-post-content > div {
-    -webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
-    transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
-    -webkit-transition-duration: 0.5s;
-    transition-duration: 0.5s; }
-  .post-template .intro-effect-sliced.modify:not(.notrans) .summer-post-header h1,
-  .post-template .intro-effect-sliced.modify:not(.notrans) .summer-post-title,
-  .post-template .intro-effect-sliced.modify:not(.notrans) .summer-post-header p,
-  .post-template .intro-effect-sliced.modify:not(.notrans) .summer-post-content > div {
-    -webkit-transition-timing-function: ease;
-    transition-timing-function: ease;
-    transition-duration: 0.5s; }
-  .post-template .intro-effect-sliced .bg-img:first-child {
-    bottom: 50%; }
-  .post-template .intro-effect-sliced .bg-img:last-child {
-    top: 50%;
-    position: fixed;
-    z-index: 900; }
-  .post-template .intro-effect-sliced .bg-img:last-child img {
-    top: -100%; }
-  .post-template .intro-effect-sliced.modify .bg-img:first-child {
-    -webkit-transform: translateY(-100%);
-    transform: translateY(-100%); }
-  .post-template .intro-effect-sliced.modify .bg-img:last-child {
-    -webkit-transform: translateY(100%);
-    transform: translateY(100%); }
-  .post-template .intro-effect-sliced .summer-post-title {
-    -webkit-transform: translateX(-50%) translateY(-50%) scale(0.7);
-    transform: translateX(-50%) translateY(-50%) scale(0.7); }
   .post-template .intro-effect-sliced.modify .summer-post-title {
     -webkit-transform: translateX(-50%) translateY(-50%) scale(1);
     transform: translateX(-50%) translateY(-50%) scale(1); }
-  .post-template .intro-effect-sliced .summer-post-header p {
-    opacity: 0;
-    color: black; }
-  .post-template .intro-effect-sliced.modify .summer-post-header p {
-    opacity: 1; }
-  .post-template .intro-effect-sliced.modify .summer-post-header h1 {
-    color: black; }
-  .post-template .intro-effect-sliced .summer-post-content > div {
-    -webkit-transform: translateY(200px);
-    transform: translateY(200px);
-    opacity: 0; }
-  .post-template .intro-effect-sliced.modify .summer-post-content > div {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-    opacity: 1; }
-  .post-template .intro-effect-sliced.modify:not(.notrans) .summer-post-title {
-    -webkit-transition-delay: 0.15s;
-    transition-delay: 0.15s; }
 
 .summer-post-share {
   font-size: 1.875rem;
@@ -450,17 +356,6 @@ html, body, .summer-post-container, .summer-post-header {
   @media screen and (max-width: 27em) {
     .summer-page-container .summer-page-title, .summer-page-container .summer-page-content {
       font-size: 50%; } }
-
-.post-template .row,
-.page-template .row {
-  max-width: 58.125rem;
-  margin-left: -0.9375rem;
-  margin-right: -0.9375rem; }
-  .post-template .row p,
-  .page-template .row p {
-    margin: 0 auto 2em auto !important;
-    max-width: 56.25rem !important;
-    font-size: 1.125rem !important; }
   @media only screen and (min-width: 58.125em) {
     .post-template .row,
     .page-template .row {
