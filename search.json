@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 ---
 [
@@ -11,16 +10,4 @@
 		  "shortdate"  : "{{ post.date | date: '%B %d, %Y' }}"
 		} {% if forloop.last %}{% else %},{% endif %}
 	{% endfor %}
-=======
-[
-	
-		{
-		  "title"      : "Initial Commit",
-		  "category"   : "",
-		  "url"        : "http://localhost:4000/blog/2017/initial-commit",
-		  "date"       : "2017-03-25 00:00:00 +1300",
-		  "shortdate"  : "March 25, 2017"
-		} 
-	
->>>>>>> a4c02971a8c7b0ae5e019ec0ac5151a51394b090
 ]
