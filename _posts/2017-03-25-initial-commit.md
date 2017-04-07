@@ -2,7 +2,7 @@
 layout: post
 title: Initial Commit
 description: "Welcome to my new blog"
-categories: personal
+categories: general
 tags:
 comments: false
 published: true

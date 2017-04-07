@@ -65,7 +65,7 @@ prose:
   rooturl: '_posts'
   siteurl: 'http://reizar.github.io/'
   relativeLinks: 'http://reizar.github.io/links.jsonp'
-  media: 'images'
+  media: 'assets/img'
   metadata:
     _posts:
       - name: "published"
@@ -88,11 +88,6 @@ prose:
           element: "text"
           label: "Description"
           placeholder: "Enter Post Description"
-      - name: "headline"
-        field:
-          element: "text"
-          label: "beadline"
-          placeholder: "Enter Post Headline"
       - name: "modified"
         field:
           element: "text"
@@ -105,6 +100,8 @@ prose:
           placeholder: "Choose categories"
           value: personal
           options:
+            - name: "General"
+              value: general
             - name: "Personal"
               value: personal
             - name: "Web-Development"
@@ -115,31 +112,11 @@ prose:
           element: "text"
           label: "Tags"
           placeholder: "Enter tags, separated by spaces"
-      - name: "imagefeature"
-        field:
-          element: "text"
-          label: "Featured Image"
-          placeholder: "somefile.jpg"
-      - name: "mathjax"
-        field:
-          element: "checkbox"
-          label: "MathJax"
-          value: false
-      - name: "featured"
-        field:
-          element: "checkbox"
-          label: "Featured?"
-          value: false
       - name: "comments"
         field:
           element: "checkbox"
           label: "Comments"
           value: false
-
-minibundle:
-  minifier_commands:
-    css: uglifycss
-    js: uglifyjs
 
 include: [".htaccess"]
 exclude: ["lib", "config.rb", "Gemfile", "Capfile", "Gemfile.lock", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules"]
