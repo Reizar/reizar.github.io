@@ -9,7 +9,7 @@ tags: 'programming, coding, learning to code, learn to code'
 description: ''
 modified: ''
 ---
-We live in a great time where learning to code is now easier than ever, with many free resources available teaching a wide variety of languages. Sites like http://codecademy.com have gained lots of popularity and are a great starting point for beginners to pick up the basics.
+We live in a great time where learning to code is now easier than ever, with many free resources available teaching a wide variety of languages. Sites like [Codecademy](http://codecademy.com) have gained lots of popularity and are a great starting point for beginners to pick up the basics.
 
 However I've been asked the same question many times and have seen it repeated around the internet. _"I've completed all the exercises in the course for XYZ language, but now what should I do?"_ In my opinion, **the answer to simply start building something**. I think that courses and books will only get you so far when it comes to learning to code, there's simply no substitute for actually building something.
 
