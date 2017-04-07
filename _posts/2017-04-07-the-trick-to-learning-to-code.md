@@ -1,13 +1,12 @@
 ---
 layout: post
-published: false
+published: true
 comments: true
 title: The trick to learning to code
 categories:
   - Programming
-tags: 'programming, coding, learning to code, learn to code'
-description: ''
-modified: ''
+tags: 'programming, coding, learning to code, learn to code, software development'
+description: My thoughts on how to take the next step on your journey of learning to code.
 ---
 We live in a great time where learning to code is now easier than ever, with many free resources available teaching a wide variety of languages. Sites like [Codecademy](http://codecademy.com) have gained lots of popularity and are a great starting point for beginners to pick up the basics.
 
