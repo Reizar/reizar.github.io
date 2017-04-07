@@ -1,7 +1,8 @@
 title:            "Aaron Rama"
 description:      "My personal website and blog."
 logo:             ""
-disqus_shortname: ""
+comments:         true
+disqus_shortname: "aaronrama"
 share:            true
 
 # Change url to your domain. Leave localhost server or blank when working locally.
