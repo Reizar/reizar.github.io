@@ -60,3 +60,11 @@ I'm not going to do a walkthrough of how to build snake but I will list some bas
 The key thing to remember is that you've broken things down to smaller problems and to try solve those as you go. Don't be afraid to use Google and resources like StackOverflow. As you run into problems try spending 15 - 20 minutes solving them. If you can't, fall back to using Google. However resources like documentation should be consulted whenever you need them. You might have to end up googling a lot of things, but thats ok. Much of programming is actually just googling, just be sure to actually write code out yourself and not just rely on copy pasting. Understand whats coming into your project.
 
 Whilst much of programming does rely on using 3rd party libraries, I'd recommend staying away from most of them in your first few projects. When you're learning they can tend to abstract away much of the code from you and its too easy to not understand whats actually going on under the hood. 
+
+### After you've built it
+
+Once you have finished building your first project and its in a working state. I would recommend trying to refactor your code. See if you can make some of it more readable and easier to maintain, add any missing comments and possibly optimize any ineffincies to make it run faster. Be sure to read other peoples codebases and learn from those. Try to apply what you've learned from other code into your own.
+
+But in reality thats about it, just rinse and repeat. Try to build as much as you can, but don't burn yourself out. I know once I started to understand the magic of programming there was no stopping me and my mind was a buzz with all the ideas for projects that I wanted to build. 
+
+I hope this helps anyone who has been struggling to work out what to do next in their journey of learning to code. Please let me know how it goes!
