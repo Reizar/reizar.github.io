@@ -1,0 +1,11 @@
+<!doctype html>
+<!-- Regression: the name/tagline must actually become visible (opacity 1) while the scene animates. -->
+<html><body style="margin:0"><pre id="out">RUNNING</pre>
+<iframe id="f" src="../index.html" style="border:0;width:900px;height:513px"></iframe>
+<script>
+setTimeout(() => {
+  const d = f.contentDocument, main = d.querySelector('main'), tl = d.querySelector('.tl');
+  const o = [getComputedStyle(main).opacity, getComputedStyle(tl).opacity];
+  out.textContent = o.every(v => v === '1') ? 'PASS' : 'FAIL main=' + o[0] + ' timeline=' + o[1];
+}, 6000);
+</script></body></html>

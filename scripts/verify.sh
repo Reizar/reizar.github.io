@@ -34,6 +34,7 @@ check "page reaches ready"            "dom '$URL' | grep -q 'class=\"ready\"'"
 check "animation on by default"       "dom '$URL' | grep -q 'data-anim=\"on\"'"
 check "reduced motion is static"      "dom '$URL' --force-prefers-reduced-motion | grep -q 'data-anim=\"off\"'"
 check "no-webgl fallback applied"     "dom '$URL' ${NOGL[*]} | grep -q 'no-webgl'"
+check "text becomes visible"         "dom '${URL}tests/reveal.html' | grep -q '>PASS<'"
 check "network unit tests pass"       "dom '${URL}tests/network.test.html' | grep -q '>PASS<'"
 
 echo "screenshots: $OUT"
