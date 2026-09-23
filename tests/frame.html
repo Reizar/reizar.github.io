@@ -1,0 +1,5 @@
+<!doctype html>
+<!-- Renders the site in an exact-size iframe; headless Chrome can't make windows narrower than ~500px. Usage: frame.html?w=360&h=640 -->
+<html><body style="margin:0;background:#222"><iframe id="f" style="border:0;display:block"></iframe>
+<script>const q = new URLSearchParams(location.search); f.style.width = q.get('w') + 'px'; f.style.height = q.get('h') + 'px'; f.src = '../index.html';</script>
+</body></html>
