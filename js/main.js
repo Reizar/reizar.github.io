@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-import { createNetwork } from './network.js';
+import { createNetwork, followPointer } from './network.js';
 
 const root = document.documentElement;
 const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -49,7 +49,7 @@ function start() {
     elapsed += Math.min(now - last, 50); // clamp so a stalled tab doesn't jump
     last = now;
     uniforms.t.value = elapsed * .001;
-    uniforms.pointer.value.lerp(pointer, .1);
+    followPointer(uniforms.pointer.value, pointer);
     look.lerp(pointer.x < 5 ? pointer : CENTRE, .03);
     group.rotation.set(elapsed * .00001, elapsed * .00004, 0);
     camera.rotation.set(look.y * .08, -look.x * .12, 0);

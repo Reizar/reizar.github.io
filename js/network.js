@@ -29,6 +29,12 @@ export function linkNeighbours(points, maxDist = 1.15, maxLinks = 2) {
   return links;
 }
 
+// Ease the glow toward the pointer; snap when entering or leaving (x > 5 means off-screen) so it never sweeps across from the corner.
+export function followPointer(current, target, k = .1) {
+  if (current.x > 5 || target.x > 5) return current.copy(target);
+  return current.lerp(target, k);
+}
+
 const FADE = `uniform float fade; float depthFade(float w){ return smoothstep(fade, fade * .25, w); }`;
 
 const NODE_VERT = `uniform vec2 pointer; uniform float dpr; attribute float size; varying float vHot; varying float vFade; ${FADE}

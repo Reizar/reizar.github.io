@@ -7,7 +7,7 @@ const out = document.getElementById('out');
 const fails = [];
 const assert = (cond, msg) => { if (!cond) fails.push(msg); };
 try {
-  const { rng, makeNodes, linkNeighbours, createNetwork } = await import('../js/network.js');
+  const { rng, makeNodes, linkNeighbours, createNetwork, followPointer } = await import('../js/network.js');
 
   const a = makeNodes(500, { random: rng(7) }), b = makeNodes(500, { random: rng(7) });
   assert(a.length === 500, 'makeNodes returns count points');
@@ -28,6 +28,15 @@ try {
   assert(net.group.children[0].isPoints && net.group.children[1].isLineSegments, 'children are Points then LineSegments');
   assert(net.uniforms.pointer.value.x === 9 && net.uniforms.dpr.value === 2, 'uniform defaults');
   assert(net.group.children[1].material.uniforms.t === net.uniforms.t, 'line material shares the t uniform');
+  // Glow must appear at the cursor (and vanish) instantly, not sweep in/out from the off-screen corner.
+  const { Vector2 } = await import('three');
+  const cur = new Vector2(9, 9);
+  followPointer(cur, new Vector2(.2, -.3));
+  assert(cur.x === .2 && cur.y === -.3, 'pointer entering snaps to the cursor');
+  followPointer(cur, new Vector2(.4, -.3));
+  assert(Math.abs(cur.x - .22) < 1e-9, 'on-screen movement eases by 0.1');
+  followPointer(cur, new Vector2(9, 9));
+  assert(cur.x === 9 && cur.y === 9, 'pointer leaving snaps off-screen');
 } catch (e) { fails.push('threw: ' + e.message); }
 out.textContent = fails.length ? 'FAIL\n' + fails.join('\n') : 'PASS';
 </script></body></html>
