@@ -1,0 +1,33 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>network.js tests</title>
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js"}}</script>
+</head><body><pre id="out">RUNNING</pre>
+<script type="module">
+const out = document.getElementById('out');
+const fails = [];
+const assert = (cond, msg) => { if (!cond) fails.push(msg); };
+try {
+  const { rng, makeNodes, linkNeighbours, createNetwork } = await import('../js/network.js');
+
+  const a = makeNodes(500, { random: rng(7) }), b = makeNodes(500, { random: rng(7) });
+  assert(a.length === 500, 'makeNodes returns count points');
+  assert(a.every((p, i) => p.equals(b[i])), 'same seed gives same points');
+  assert(a.every(p => p.length() >= 1.6 - 1e-6 && p.length() <= 9.1 + 1e-6), 'points lie in shell 1.6..9.1');
+
+  const links = linkNeighbours(a, 1.15, 2);
+  const firsts = {};
+  links.forEach(([i, j]) => { firsts[i] = (firsts[i] || 0) + 1; });
+  assert(links.length > 0, 'some links exist');
+  assert(links.every(([i, j]) => i < j && a[i].distanceTo(a[j]) < 1.15), 'links are i<j and shorter than maxDist');
+  assert(Object.values(firsts).every(n => n <= 2), 'at most maxLinks per node');
+
+  const net = createNetwork({ count: 300, accent: '#5aa9ff', dpr: 2 });
+  assert(net.stats.nodes === 300, 'stats.nodes matches count');
+  assert(net.stats.links > 0, 'stats.links > 0');
+  assert(net.group.children.length === 2, 'group has points + lines');
+  assert(net.group.children[0].isPoints && net.group.children[1].isLineSegments, 'children are Points then LineSegments');
+  assert(net.uniforms.pointer.value.x === 9 && net.uniforms.dpr.value === 2, 'uniform defaults');
+  assert(net.group.children[1].material.uniforms.t === net.uniforms.t, 'line material shares the t uniform');
+} catch (e) { fails.push('threw: ' + e.message); }
+out.textContent = fails.length ? 'FAIL\n' + fails.join('\n') : 'PASS';
+</script></body></html>
