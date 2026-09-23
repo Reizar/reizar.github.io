@@ -8,7 +8,6 @@ const OFFSCREEN = new THREE.Vector2(9, 9), CENTRE = new THREE.Vector2();
 
 function reveal(cls) {
   root.classList.add(cls);
-  root.classList.remove('loading');
 }
 
 function start() {
@@ -78,7 +77,7 @@ function start() {
   root.dataset.anim = 'off';
   resize(); // sizes the canvas and draws the first (for reduced motion: only) frame
   requestAnimationFrame(() => reveal('ready'));
-  // Start motion only after the fade-in: a busy render loop can stall the CSS transitions and leave the text invisible.
+  // Start motion only after the canvas fade-in: a busy render loop from frame one can stall CSS transitions.
   setTimeout(play, 1500);
 }
 

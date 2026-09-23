@@ -21,12 +21,13 @@ h1{font-weight:500;font-size:clamp(56px,11vw,176px);letter-spacing:-.06em;line-h
   list-style:none;font-size:13px;line-height:1.35;color:var(--dim)}
 .tl b{display:block;color:var(--fg);font-weight:500}
 
-main,.tl{transition:opacity .8s ease .5s,transform .8s ease .5s}
-.loading main,.loading .tl{opacity:0;transform:translateY(12px)}
+/* Text fades in on its own at load; it never waits on the scene, so it can't be left hidden. */
+main,.tl{animation:rise .9s ease both}
+@keyframes rise{from{opacity:0;transform:translateY(12px)}}
 
 @media (max-width:760px){
   .tl{flex-direction:column;align-items:center;gap:10px;bottom:24px;text-align:center}
   main{padding-bottom:170px}
 }
 @media (max-height:520px){ .tl{display:none} main{padding-bottom:0} }
-@media (prefers-reduced-motion:reduce){ #scene,main,.tl{transition:none} }
+@media (prefers-reduced-motion:reduce){ #scene{transition:none} main,.tl{animation:none} }

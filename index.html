@@ -16,14 +16,11 @@
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500&display=swap">
+  <!-- Non-blocking font load: text paints immediately in the fallback face, then swaps. -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500&display=swap"></noscript>
   <link rel="stylesheet" href="style.css">
-  <script>
-    // Hide the text until the scene is ready, but never for longer than 2.5s (covers CDN/module failure).
-    document.documentElement.classList.add('loading');
-    setTimeout(() => document.documentElement.classList.remove('loading'), 2500);
-  </script>
-  <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js"}}</script>
+  <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.min.js"}}</script>
   <script type="module" src="js/main.js"></script>
 </head>
 <body>
